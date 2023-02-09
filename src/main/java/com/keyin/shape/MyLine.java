@@ -1,10 +1,12 @@
-package com.keyin.qap2;
+package com.keyin.shape;
 /*
  * Project: QAP2 Problem #1 The MyLine and MyPoint Classes
  * Course Name: Advanced Programming (Java)
  * Written by: David Turner
  * Due Date: Feb 10, 2023
  */
+
+import com.keyin.point.MyPoint;
 
 public class MyLine {
     // below are the instance variables
@@ -61,6 +63,7 @@ public class MyLine {
         end.setY(endY);
     }
     public int[] getBeginXY(){
+//        return this.getBeginXY();
         return begin.getXY();
     }
     public void setBeginXY(int beginX, int beginY){
@@ -77,6 +80,7 @@ public class MyLine {
     }
     // to use MyPoint's distance()
     public double getLength(){
+
         return begin.distance(end.getX(), end.getY());
     }
 

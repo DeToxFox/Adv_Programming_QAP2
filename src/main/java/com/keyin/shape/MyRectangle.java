@@ -1,4 +1,4 @@
-package com.keyin.qap2;
+package com.keyin.shape;
 /*
  * Project: QAP2 Problem #2 The MyRectangle and MyPoint Classes
  * Course Name: Advanced Programming (Java)
@@ -6,18 +6,32 @@ package com.keyin.qap2;
  * Due Date: Feb 10, 2023
  */
 
+import com.keyin.point.MyPoint;
+
 public class MyRectangle {
     private MyPoint topLeft;
     private MyPoint bottomRight;
 
+    // below is the default constructor and it calls the other constructor that takes in 4 ints using MyPoint
     public MyRectangle(int x1, int y1, int x2, int y2){
         this.topLeft = new MyPoint(x1, y1);
         this.bottomRight = new MyPoint(x2, y2);
     }
 
+    // this constructor takes in 2 MyPoint objects created in the MyPoint class and assigns them to the instance variables
     public MyRectangle(MyPoint topLeft, MyPoint bottomRight){
         this.topLeft = topLeft;
         this.bottomRight = bottomRight;
+    }
+
+    // create a method that can create the bottom left point by taking the x value of top left and the y value of bottom right
+    public MyPoint getBottomLeft(){
+        return new MyPoint(topLeft.getX(), bottomRight.getY());
+    }
+
+    // create a method that can create the top right point by taking the x value of bottom right and the y value of top left
+    public MyPoint getTopRight(){
+        return new MyPoint(bottomRight.getX(), topLeft.getY());
     }
 
     // Getters and Setters
