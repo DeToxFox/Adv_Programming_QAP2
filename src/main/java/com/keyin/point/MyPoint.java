@@ -1,4 +1,4 @@
-package com.keyin.qap2;
+package com.keyin.point;
 /*
  * Project: QAP2 Problem #1 & #2 MyLine, MyRectangle and MyPoint Classes
  * Course Name: Advanced Programming (Java)
@@ -43,9 +43,17 @@ public class MyPoint {
     }
 
     // I had to add in a getXY method to return both x and y NOTE: I USED THE QUICK FIX TO ADD IN THE METHOD NOT SURE WHY RETURN TYPE IS NULL
+    // this needs to return an array of ints
     public int[] getXY() {
-        return null;
+        int[] xy = new int[2];
+        xy[0] = this.x;
+        xy[1] = this.y;
+        return xy;
     }
+//    public int[] getXY() {
+//
+//        return null;
+//    }
 
     public void setXY(int x, int y) {
         this.x = x;

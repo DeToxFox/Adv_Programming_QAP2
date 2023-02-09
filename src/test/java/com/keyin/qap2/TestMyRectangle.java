@@ -10,6 +10,8 @@ package com.keyin.qap2;
 // ultimatey MyPoint is only used to create the points needed in the MyRectangle class and
 //TestMyRectangle class is used to test the MyRectangle class
 
+import com.keyin.shape.MyRectangle;
+
 public class TestMyRectangle {
     public static void main(String[] args) {
         // creating a rectangle instance variable representing just the top
@@ -31,6 +33,14 @@ public class TestMyRectangle {
 
         // test the toString() method to display this as a string "[(x1,y1),(x2,y2)]"
         System.out.println("rectangle1.toString() = " + rectangle1.toString());
+
+        // print out the bottom left point on the rectangle
+        System.out.println("rectangle1.getBottomLeft() = " + rectangle1.getBottomLeft());
+
+        // print out the top right point on the rectangle
+        System.out.println("rectangle1.getTopRight() = " + rectangle1.getTopRight());
+
+
 
     }
 }
