@@ -42,18 +42,13 @@ public class MyPoint {
         this.y = y;
     }
 
-    // I had to add in a getXY method to return both x and y NOTE: I USED THE QUICK FIX TO ADD IN THE METHOD NOT SURE WHY RETURN TYPE IS NULL
-    // this needs to return an array of ints
+    // added in a getXY method to return both x and y
     public int[] getXY() {
         int[] xy = new int[2];
         xy[0] = this.x;
         xy[1] = this.y;
         return xy;
     }
-//    public int[] getXY() {
-//
-//        return null;
-//    }
 
     public void setXY(int x, int y) {
         this.x = x;
@@ -72,15 +67,19 @@ public class MyPoint {
         return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
 
-    // Distance from this point to the given instance of MyPoint using MyPoint as the parameter and another as the argument
+    // Distance from this point to the given instance of MyPoint using MyPoint
+    // as the parameter and another as the argument
     public double distance(MyPoint another) {
         int xDiff = this.x - another.x;
         int yDiff = this.y - another.y;
         return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
     }
 
-    // Distance from this point to the origin (0,0), NOTE: ASK DR.M ABOUT THIS, HOW FROM THE DIAGRAM WOULD ONE KNOW HOW TO DO THIS?
-    // SHOULD THIS METHOD HAVE this.x subtracted from 0 and this.y subtracted from 0 before the Math.sqrt? because the problem says to use the distance from this point to (0,0) but the diagram shows the distance from (0,0) to this point so I'm not sure how to do this.
+    // Distance from this point to the origin (0,0),
+    // NOTE: ASK DR.M ABOUT THIS, HOW FROM THE DIAGRAM WOULD ONE KNOW HOW TO DO THIS?
+    // SHOULD THIS METHOD HAVE this.x subtracted from 0 and this.y subtracted from 0
+    // before the Math.sqrt? because the problem says to use the distance from this point to
+    // (0,0) but the diagram shows the distance from (0,0) to this point so I'm not sure how to do this.
     public double distance(){
         int xDiff = this.x;
         int yDiff = this.y;

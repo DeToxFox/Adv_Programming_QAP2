@@ -22,7 +22,6 @@ public class Address {
         this.zip = zip;
     }
 
-
     // toString method that will return the address
     public String toString(){
         return street + " " + city + " " + state + " " + zip;
