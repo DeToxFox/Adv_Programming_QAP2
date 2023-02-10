@@ -13,7 +13,7 @@ public class Money {
     private long dollars;
     private long cents;
 
-    // Constructor, NOTE DOLLARS AND CENTS MATH MIGHT NEED TO BE CHANGED
+    // Constructor
     public Money(double Amount){
         long totalCents = Math.round(Amount * 100);
         this.cents = totalCents % 100;
@@ -21,7 +21,9 @@ public class Money {
     }
 
     // Copy Constructor
-    // if another method wants to use this constructor it will pass in a Money object and can be signified by the parameter otherObject or simply this because "this" is a reference to the current object that this copy constructor is being called on
+    // if another method wants to use this constructor it will pass in a Money object
+    // and can be signified by the parameter otherObject or simply this because "this" is a
+    // reference to the current object that this copy constructor is being called on
     public Money(Money otherObject) {
         this.dollars = otherObject.dollars;
         this.cents = otherObject.cents;
@@ -54,18 +56,12 @@ public class Money {
     public Money add(Money otherObject){
         // creating an add function that will not duplicate the code in the constructor
         // this will create a new object called newAmount that will be a copy of the current object
-        // the reason for a new object is that i don't want to change the current object which the current object is "this" and comes from the parameter otherObject that is passed in from the charge method in the CreditCard class and is a copy of the balance object if I dont create a new object then the balance object will be changed and I don't want that
         Money newAmount = new Money(this);
         // this will add the new amount to the newAmount object
         newAmount.dollars += otherObject.dollars;
         newAmount.cents += otherObject.cents;
         // this will return the newAmount object
         return newAmount;
-
-        // commented out code below my original
-//        this.dollars += otherObject.dollars;
-//        this.cents += otherObject.cents;
-//        return this;
     }
 
     // subtract money will take a new amount passed in from payment and subtract it from balance
@@ -77,9 +73,11 @@ public class Money {
 
     // compareTo in this instance will compare the current object to the object being passed in
     public int compareTo(Money otherObject){
-        // the first condition checks if this.dollars is greater than otherObject.dollars and if it is it returns 1 because this is greater than otherObject and if it is not it moves on to the next condition
-        // this.dollars is the current object and otherObject.dollars is the object being passed in
-        // by returning 1 it means that this is greater than otherObject it is not returning the value of this.dollars
+        /* the first condition checks if this.dollars is greater than otherObject.dollars and
+        * if it is it returns 1 because this is greater than otherObject and if it is not it moves on to the next condition
+        * this.dollars is the current object and otherObject.dollars is the object being passed in
+        * it is not returning the value of this.dollars */
+
         if (this.dollars > otherObject.dollars){
             return 1;
         } else if (this.dollars < otherObject.dollars){

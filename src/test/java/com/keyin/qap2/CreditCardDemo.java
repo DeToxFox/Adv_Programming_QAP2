@@ -5,6 +5,13 @@ import com.keyin.creditcard.Money;
 import com.keyin.creditcard.Person;
 import com.keyin.creditcard.Address;
 
+/*
+ * Project: QAP2 Problem #3 Credit Card, Money, Person and Address Classes
+ * Course Name: Advanced Programming (Java)
+ * Written by: David Turner
+ * Due Date: Feb 10, 2023
+ */
+
 public class CreditCardDemo {
     // main method
     public static void main(String[] args) {
@@ -17,20 +24,24 @@ public class CreditCardDemo {
 
         Person owner = new Person("Christie", "Diane", new Address("237J Harvey Hall", "Menomonie", "WI", "54751"));
         CreditCard visa = new CreditCard(LIMIT, owner);
-        System.out.println(visa.getPersonals());
-        System.out.println("Balance 0 : " + visa.getBalance());
+        System.out.println("\n" + visa.getPersonals());
+        System.out.println("Balance : " + visa.getBalance());
         System.out.println("Credit Limit: " + visa.getCreditLimit() + "\n");
+
         System.out.println("Attempt to charge " + FIRST_AMOUNT);
         visa.charge(FIRST_AMOUNT);
-        System.out.println("Balance1 : " + visa.getBalance());
+        System.out.println("Balance : " + visa.getBalance() + "\n");
+
         System.out.println("Attempt to charge " + SECOND_AMOUNT);
         visa.charge(SECOND_AMOUNT);
-        System.out.println("Balance 2 : " + visa.getBalance());
+        System.out.println("Balance : " + visa.getBalance() + "\n");
+
         System.out.println("Attempt to pay " + THIRD_AMOUNT);
         visa.payment(THIRD_AMOUNT);
-        System.out.println("Balance 3 : " + visa.getBalance());
+        System.out.println("Balance : " + visa.getBalance() + "\n");
+
         System.out.println("Attempt to charge " + FOURTH_AMOUNT);
         visa.charge(FOURTH_AMOUNT);
-        System.out.println("Balance5 : " + visa.getBalance());
+        System.out.println("Balance : " + visa.getBalance() + "\n");
     }
 }

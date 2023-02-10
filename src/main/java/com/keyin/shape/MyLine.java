@@ -9,16 +9,17 @@ package com.keyin.shape;
 import com.keyin.point.MyPoint;
 
 public class MyLine {
-    // below are the instance variables
+    // instance variables
     private MyPoint begin;
     private MyPoint end;
 
-    // the constructor below is used to create MyLine instance with the default begin and end points that are (0,0) and (1,1) and comes from the MyPoint class
+    // the constructor below is used to create MyLine instance with the default begin and end points that are set to values of (0,0)
     public MyLine(int x1, int y1, int x2, int y2) {
         this.begin = new MyPoint(x1, y1);
         this.end = new MyPoint(x2, y2);
     }
-    // below is a constructor it takes the begin and end points from the above constructor and passes them in as parameters
+    // below is a constructor it takes the beginning and end points from the above constructor
+    // and passing them in as parameters
     public MyLine(MyPoint begin, MyPoint end) {
         this.begin = begin;
         this.end = end;
@@ -74,13 +75,11 @@ public class MyLine {
     public int[] getEndXY(){
         return end.getXY();
     }
-
     public void setEndXY(int endX, int endY){
         end.setXY(endX, endY);
     }
     // to use MyPoint's distance()
     public double getLength(){
-
         return begin.distance(end.getX(), end.getY());
     }
 
@@ -88,7 +87,6 @@ public class MyLine {
     public double getGradient(){
         return Math.atan2(end.getY() - begin.getY(), end.getX() - begin.getX());
     }
-
 
     public String toString(){
         return "MyLine[begin=" + begin + ", end=" + end + "]";

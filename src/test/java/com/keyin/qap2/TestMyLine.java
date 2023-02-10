@@ -1,4 +1,6 @@
 package com.keyin.qap2;
+import com.keyin.shape.MyLine;
+import java.util.Arrays;
 /*
  * Project: QAP2 Problem #1 The MyLine and MyPoint Classes
  * Course Name: Advanced Programming (Java)
@@ -6,12 +8,7 @@ package com.keyin.qap2;
  * Due Date: Feb 10, 2023
  */
 
-// Test all the public methods in the MyLine class only, these methods are the ones that are not in the
-// MyPoint class and are by name: getBegin(), getEnd(), getBeginX(), getBeginY(), getEndX(), getEndY(),
-// setBeginX(int x), setBeginY(int y), setEndX(int x), setEndY(int y), getLength(), getGradient(), toString()
-
-import com.keyin.shape.MyLine;
-import java.util.Arrays;
+// Test MyLine class
 
 public class TestMyLine {
     public static void main(String[]args){
@@ -19,22 +16,22 @@ public class TestMyLine {
         MyLine line1 = new MyLine(1,1,2,2);
 
         // test the getBegin() method
-        System.out.println("line1.getBegin() = " + line1.getBegin());
+        System.out.println("\n" + "line1.getBegin() = " + line1.getBegin());
 
         // test the getEnd() method
-        System.out.println("line1.getEnd() = " + line1.getEnd());
+        System.out.println("line1.getEnd() = " + line1.getEnd() + "\n");
 
         // test the getBeginX() method
         System.out.println("line1.getBeginX() = " + line1.getBeginX());
 
         // test the getBeginY() method
-        System.out.println("line1.getBeginY() = " + line1.getBeginY());
+        System.out.println("line1.getBeginY() = " + line1.getBeginY() + "\n");
 
         // test the getEndX() method
         System.out.println("line1.getEndX() = " + line1.getEndX());
 
         // test the getEndY() method
-        System.out.println("line1.getEndY() = " + line1.getEndY());
+        System.out.println("line1.getEndY() = " + line1.getEndY() + "\n");
 
         // test the setBeginX(int x) method
         line1.setBeginX(1);
@@ -42,7 +39,7 @@ public class TestMyLine {
 
         // test the setBeginY(int y) method
         line1.setBeginY(1);
-        System.out.println("line1.setBeginY(1) = " + line1.getBeginY());
+        System.out.println("line1.setBeginY(1) = " + line1.getBeginY() + "\n");
 
         // test the setEndX(int x) method
         line1.setEndX(2);
@@ -50,20 +47,19 @@ public class TestMyLine {
 
         // test the setEndY(int y) method
         line1.setEndY(2);
-        System.out.println("line1.setEndY(2) = " + line1.getEndY());
+        System.out.println("line1.setEndY(2) = " + line1.getEndY() + "\n");
+
+        // test get beginXY and endXY and testing toString() method in the MyPoint class
+        System.out.println("line1.getBeginXY() = " + (Arrays.toString(line1.getBeginXY())));
+        System.out.println("line1.getEndXY() = " + (Arrays.toString(line1.getEndXY())) + "\n");
 
         // test the getLength() method
         System.out.println("line1.getLength() = " + line1.getLength());
 
         // test the getGradient() method
-        System.out.println("line1.getGradient() = " + line1.getGradient());
+        System.out.println("line1.getGradient() = " + line1.getGradient() + "\n");
 
         // test the toString() method sending begin and end to the toString() method in the MyPoint class
-        System.out.println("line1.toString() = " + line1.toString());
-
-
-        // test get beginXY and endXY
-        System.out.println("line1.getBeginXY() = " + (Arrays.toString(line1.getBeginXY())));
-//        System.out.println("line1.getEndXY() line 63= " + line1.getEndXY());
+        System.out.println("line1.toString() = " + line1.toString() + "\n");
     }
 }
