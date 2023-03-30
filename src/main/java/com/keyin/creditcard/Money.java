@@ -8,7 +8,7 @@ package com.keyin.creditcard;
  */
 
 public class Money {
-
+// long is used because it is a 64 bit integer and will allow for larger numbers vs double will only allow for 15 digits
     // instance variables
     private long dollars;
     private long cents;
